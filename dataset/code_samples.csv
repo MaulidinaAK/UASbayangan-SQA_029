@@ -1,0 +1,27 @@
+id,code,expected_bug
+CODE_01,"
+def divide(a, b):
+    return a / b
+",Tidak menangani pembagian dengan nol
+CODE_02,"
+def calculate_average(numbers):
+    total = sum(numbers)
+    return total / len(numbers)
+",Tidak menangani list kosong
+CODE_03,"
+def find_max(numbers):
+    max_value = 0
+    for number in numbers:
+        if number > max_value:
+            max_value = number
+    return max_value
+",Inisialisasi nilai maksimum salah untuk semua angka negatif
+CODE_04,"
+def add_item(item, items=[]):
+    items.append(item)
+    return items
+",Menggunakan mutable default argument
+CODE_05,"
+def calculate_discount(price, discount):
+    return price * discount / 100
+",Rumus menghitung harga setelah diskon salah
